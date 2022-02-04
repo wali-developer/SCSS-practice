@@ -1,0 +1,18 @@
+<svg width="130" height="135" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>Layer 1</title>
+  <ellipse transform="rotate(0.558222 63.7805 65.2903)" stroke="#efef43" ry="64.27582" rx="62.78989" id="svg_1" cy="65.29033" cx="63.78048" fill="#e1bc62"/>
+  <text font-style="normal" font-weight="bold" transform="matrix(0.838408 0 0 0.930165 35.3185 25.1124)" stroke="#000" xml:space="preserve" text-anchor="start" font-family="monospace" font-size="23" stroke-width="0" id="svg_2" y="47.98781" x="-24.43544" fill="#000000">Your Logo</text>
+  <text font-style="normal" font-weight="normal" transform="matrix(0.503447 0 0 0.439625 170.754 163.352)" stroke="#000" xml:space="preserve" text-anchor="start" font-family="monospace" font-size="24" id="svg_3" y="-185.49009" x="-275.96923" stroke-width="0" fill="#000000">eCOMMERCE</text>
+  <line id="svg_5" y2="144.30594" x2="247.8334" y1="144.30594" x1="248.8334" stroke="#000" fill="none"/>
+  <line transform="rotate(-8.71409 28.8334 36.3059)" id="svg_7" y2="25.59907" x2="20.50676" y1="47.0128" x1="37.16005" fill="none"/>
+  <line stroke="#000000" id="svg_9" y2="26.30594" x2="97.8334" y1="48.30594" x1="81.8334" fill="none"/>
+  <line stroke="#000000" id="svg_10" y2="110.30594" x2="32.8334" y1="93.30594" x1="47.8334" fill="none"/>
+  <line stroke="#000000" id="svg_11" y2="110.30594" x2="92.8334" y1="91.30594" x1="75.8334" fill="none"/>
+  <line stroke="#ffffff" id="svg_14" y2="126.30594" x2="344.8334" y1="60.30594" x1="264.83341" fill="none"/>
+  <line stroke="#ffffff" id="svg_15" y2="128.30593" x2="269.83341" y1="56.30593" x1="340.83341" fill="none"/>
+  <line stroke="#000000" id="svg_17" y2="29.30594" x2="23.8334" y1="49.30594" x1="39.8334" fill="none"/>
+  <line id="svg_18" y2="244.30594" x2="126.8334" y1="244.30594" x1="127.8334" stroke="#000000" fill="none"/>
+ </g>
+</svg>

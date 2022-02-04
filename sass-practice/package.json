@@ -1,0 +1,17 @@
+{
+  "name": "sasslearning",
+  "version": "1.0.0",
+  "description": "This is all about learning advance css (sass)",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "keywords": [
+    "sass"
+  ],
+  "author": "Waliullah",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  }
+}

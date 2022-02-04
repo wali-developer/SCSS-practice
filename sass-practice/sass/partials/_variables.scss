@@ -1,0 +1,41 @@
+//=====THEME=======
+//theme variable acceptable for Dark, Light.
+$theme: Dark;
+
+//=====COLORS=======
+$text-color: black;
+$footer-background: lightgray;
+$link-color: red;
+$menu-item-color: white;
+$header-background: rgb(69, 98, 102);
+$body-background-color: #fff;
+$footer-text: white;
+
+//=====Dark=======
+@if $theme == Dark {
+    $body-background-color: rgb(24, 31, 43);
+    $text-color: white;
+    $footer-background: #456266;
+    $link-color: rgb(255, 238, 0);
+    $menu-item-color: white;
+    $header-background: #456266;
+    $footer-text: white;
+}
+@else if $theme == Light{
+    $body-background-color: #fff;
+    $text-color: black;
+    $footer-background: lightgray;
+    $link-color: red;
+    $menu-item-color: white;
+    $header-background: rgb(69, 98, 102);
+    $footer-text: black;
+}
+
+//=====FONTS=======
+$text-font: 'poppins', sans-serif;
+$heading-font: 'Acme', Arial;
+
+//=====SIZES=======
+$header-height: 60px;
+$footer-height: 90px;
+$content-width: 960px;

@@ -1,0 +1,67 @@
+@mixin google-font($font) {
+  $font: unquote($font);
+  @import url(https://fonts.googleapis.com/css2?family=#{$font}); // #{$font} curly brases and hash used b/c browser will know that this is a variable
+}
+
+@mixin button {
+    padding: 8px 12px;
+    background-color: rgb(12, 100, 182);
+    border: none;
+    color: white;
+  }
+@mixin fancy-links {
+ a{
+    text-decoration: none;
+    font-style: italic;
+    text-transform: capitalize;
+    font-size: 15px;
+  }
+}
+  
+@mixin rounded($radius: 5px) {
+  border-radius: $radius;
+}
+@mixin box($radius: 5px, $border: 1px solid blue) {
+  @include rounded();
+  border: $border;
+  box-shadow: 2px 2px 6px $header-background;
+}
+  
+@mixin paragraphs {
+  text-align: justify;
+}
+  
+@mixin headings {
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+@mixin passing-html-body{
+  * html{
+    @content;
+  }
+}
+
+//=====mixins for Responsivness=======
+@mixin small-screen() {
+  @media only screen and (max-width: 576px){
+    @content;
+  }
+}
+@mixin medium-screen() {
+  @media only screen and (max-width: 769px){
+    @content;
+  }
+}
+
+@mixin large-screen() {
+  @media only screen and (max-width: 960px){
+    @content;
+  }
+}
+
+@mixin xlarge-screen() {
+  @media only screen and (max-width: 1400px){
+    @content;
+  }
+}

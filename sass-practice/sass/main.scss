@@ -1,0 +1,195 @@
+@import "partials/variables";
+@import "partials/mixin";
+@import "partials/functions";
+
+@include google-font("poppins");
+@include google-font('Acme');
+
+//==========for Loop=======
+@for $i from 0 to 7{
+  .col-#{$i}{
+    width: $i * 2em;
+  }
+}
+@for $z from 0 to 4{
+  .gap-#{$z}{
+    width: $z *1em;
+  }
+}
+
+//==========each Loop=======
+$speakers: Ali, Usama, Farooq, Umair;
+@each $speaker in $speakers {
+  .#{$speaker}-prfile{
+    background-image: url(images/#{$speaker}.png);
+  }
+}
+
+$font-sizes: (tiny: 8px, small: 10px, medium: 12px, large: 14px, xlarge: 16px);
+@each $name, $size in $font-sizes {
+  .#{$name}{
+    font-size: $size;
+  }
+} 
+
+//==========while Loop=======
+$j: 2;
+@while $j >= 8 
+{
+  .product-#{$j} 
+  {
+    width: $j * 10%;
+  }
+  $j: $j+3;
+}
+
+@include passing-html-body{
+  body{
+    font-size: 125%;
+  }
+}
+
+body {
+  font-family: $text-font;
+  color: $text-color;
+  @include  fancy-links;
+  background-color: $body-background-color;
+  @include medium-screen{
+    font-size: 125%;
+  }
+}
+
+.error{               // class created for practice purpose of extend.
+  font-size: 18px;
+  padding: 10px 15px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: gray;
+}
+
+%percentage{          // this selector will not generate css code, we can extend it inside another class.
+  font-style: italic;
+  border-bottom: 1px solid black;
+}
+
+.another-error{
+  @extend .error;      //class error extend to .another-class
+  @extend %percentage;
+  @extend .foo !optional;     //the class .foo does't exist but we can use a class like this in optional.
+  font-weight: bold;
+  text-transform: uppercase;
+
+}
+
+h1, h2, h3, h4 {
+  font-family: $heading-font;
+}
+h1{
+  @include headings;
+  font-size: em(25px);
+}
+h2{
+  @include headings;
+  font-size: em(20px);
+}
+
+p {
+  font-family: $text-font;
+  @include paragraphs;
+  font-size: em(16px);
+}
+
+a {
+  color: $link-color;
+
+  &:hover{
+    color: darken($link-color, 8%);
+  }
+}
+#btn{
+  @include button;
+  @include rounded();
+
+  &:hover{
+    background-color: darken(#0c64b6, 10%);
+  }
+}
+
+#header {
+  background-color: $header-background;
+  height: $header-height;
+  @include box(10px, 1px solid gray);
+  display: flex;
+  flex-direction: row;
+
+  #main-menu {
+    width: 80%;
+    line-height: 1.7;
+    li{
+      display: inline;
+    }
+    a{
+      color: $menu-item-color;
+      padding: 8px 12px;
+      transition: border-bottom 0.5s;
+      transition-timing-function: ease-in-out;
+
+      &:hover{
+        border-bottom: 1px solid opacify($menu-item-color, .5);
+      }
+    }
+  }
+  
+  #logo {
+    width: 130px;
+    max-width: 20%;
+  }
+}
+
+#main {
+  width: $content-width;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  @include large-screen{
+    max-width: 960px;
+    width: auto;
+  }
+  #content {
+    width: 80%;
+  }
+
+  #sidebar {
+    width: 20%;
+    text-align: center;
+    ul{
+      list-style-type: none;
+      padding-top: 80px;
+    }
+    li{
+      padding: 8px 15px;
+      border-bottom: 1px dotted gray;
+      text-align: left;
+      &:hover{
+        background-color: gray;
+        color: white;
+      }
+    }
+  }
+}
+
+$contrast: low;
+#footer {
+  height: $footer-height;
+  background-color: $footer-background;
+  color: $footer-text;
+  text-align: center;
+  line-height: 6;
+}
+td {
+  span{
+    font-size: 20px;
+  }
+}
